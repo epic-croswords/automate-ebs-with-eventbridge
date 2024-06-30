@@ -6,7 +6,7 @@ def lambda_handler(event, context):
     
     try:
         # EC2 Client
-        client = boto3.client('ec2', region_name='us-east-1')
+        client = boto3.client('ec2', region_name='ap-south-1')
         # Get Volume ID of EBS attached to EC2 Instnace
         response = client.describe_volumes()
         if len(response['Volumes']) > 0:
